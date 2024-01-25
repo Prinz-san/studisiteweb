@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <h1>JOUER COMPORTE DES RISQUES : ENDETTEMENT, ISOLEMENT, DÉPENDANCE.</h1>
+        <h1>POUR ÊTRE AIDÉ APPELER LE 09 74 75 13 13</h1>
+    </div>
+    <div class="menu">
+        <img src="assets/logo.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="matchs.html">Matchs</a></li>
+            <li><a href="paris.html">Paris</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="compte-container">
+        <button id="add-team-button" class="bouton-simple">Ajouter une équipe</button>
+        <button id="add-player-button" class="bouton-simple">Ajouter un joueur</button>
+        <button id="add-match-button" class="bouton-simple">Ajouter un match</button>
+        <div class="compte-content">
+
+
+          <div id="match-list-container" style="width: 30%; float: left;">
+    <h3>Liste des matchs</h3>
+    <ul id="match-list"></ul>
+</div>
+
+
+            
+             <!-- Modale pour ajouter une équipe -->
+    <div id="add-team-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ajouter une équipe</h2>
+            <form id="add-team-form">
+                <input type="text" id="team-nom" placeholder="Nom de l'équipe" required>
+                <input type="text" id="team-pays" placeholder="Pays" required>
+                <button type="submit" class="submit-button">Ajouter</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Modale pour ajouter un joueur -->
+<div id="add-player-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Ajouter un joueur</h2>
+        <form id="add-player-form">
+            <input type="text" id="player-nom" placeholder="Nom du joueur" required>
+            <input type="number" id="player-numero" placeholder="Numéro du joueur" required>
+            <select id="player-equipe"></select>
+            <button type="submit" class="submit-button">Ajouter</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modale pour ajouter un match -->
+<div id="add-match-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Ajouter un match</h2>
+        <form id="add-match-form">
+            <select id="match-equipe1"></select>
+            <input type="number" id="match-cote1" placeholder="Cote 1" step="0.10" min="1.50" max="10" required>
+            <select id="match-equipe2"></select>
+            <input type="number" id="match-cote2" placeholder="Cote 2" step="0.10" min="1.50" max="10" required>
+            <input type="date" id="match-date" required>
+            <select id="match-time" required>
+                <option value="">Choisir l'heure</option>
+                <option value="10:00">10H00</option>
+                <option value="11:00">11H00</option>
+                <option value="12:00">12H00</option>
+                <option value="13:00">13H00</option>
+                <option value="14:00">14H00</option>
+                <option value="15:00">15H00</option>
+                <option value="16:00">16H00</option>
+                <option value="17:00">17H00</option>
+                <option value="18:00">18H00</option>
+                <option value="19:00">19H00</option>
+                <option value="20:00">20H00</option>
+                <option value="21:00">21H00</option>
+                <option value="22:00">22H00</option>
+                <option value="23:00">23H00</option>
+            </select>
+
+
+            <select id="match-meteo" required>
+                <option value="">Choisir la météo</option>
+                <option value="ensoleillé">Ensoleillé</option>
+                <option value="nuageux">Nuageux</option>
+                <option value="pluvieux">Pluvieux</option>
+                <option value="venteux">Venteux</option>
+                <option value="neigeux">Neigeux</option>
+            </select>
+            <button type="submit" class="submit-button">Ajouter</button>
+        </form>
+    </div>
+</div>
+
+
+
+    <div id="team-list-container" style="width: 30%; float: right;">
+        <h3>Liste des équipes</h3>
+        <ul id="team-list"></ul>
+    </div>
+        </div>
+    </div>
+
+
+    
+    <div id="player-list-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Liste des joueurs</h2>
+        <ul id="player-list"></ul>
+    </div>
+</div>
+
+    <footer>
+        Tous droits réservés 2023
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="init.js" type="module"></script>
+    <script src="scripts.js" type="module"></script>
+    <script src="moncompte.js" type="module"></script>
+    <script src="administration.js" type="module"></script>
+</body>
+</html>

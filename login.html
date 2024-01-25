@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous d'ajouter le lien vers votre fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -13,7 +13,7 @@
             <h1>POUR ÊTRE AIDÉ APPELER LE 09 74 75 13 13</h1>
         </div>
         <div class="menu">
-            <img src="logo.png" alt="Logo">
+            <img src="assets/logo.png" alt="Logo">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -26,7 +26,7 @@
             <h2>Login</h2>
             <form id="login-form">
                 <input type="email" id="email" placeholder="Adresse e-mail" required>
-                <input type="password" id="password" placeholder="Mot de passe" required>
+                <input type="password" id="login-password" placeholder="Mot de passe" required>
                 <button type="submit" class="login-button">Se connecter</button>
             </form>
             <p>OU</p>
@@ -35,7 +35,7 @@
                 <input type="text" id="user-prenom" placeholder="Prénom" required>
                 <input type="text" id="user-nom" placeholder="Nom" required>
                 <input type="email" id="user-email" placeholder="Adresse e-mail" required>
-                <input type="password" id="password" placeholder="Mot de passe" required>
+                <input type="password" id="signup-password" placeholder="Mot de passe" required>
                 <button type="submit" class="signup-button">S'inscrire</button>
             </form>
             <p><a href="#" id="reset-password-link" class="reset-link">Mot de passe oublié ?</a></p>
@@ -45,6 +45,7 @@
     <footer>
         Tous droits réservés 2023
     </footer>
+    <script src="init.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>

@@ -12,7 +12,7 @@
         <h1>POUR ÊTRE AIDÉ APPELER LE 09 74 75 13 13</h1>
     </div>
     <div class="menu">
-        <img src="logo.png" alt="Logo">
+        <img src="assets/logo.png" alt="Logo">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="login.html">Login</a></li>
@@ -21,24 +21,25 @@
         </ul>
     </div>
 
-    <div class="compte-container">
+    <div class="compte-container" >
         <h2>Mon compte</h2>
         <div class="compte-content">
-            <div class="dashboard" style="width: 70%; float: left;">
-                <h3>Mon tableau de bord</h3>
-                <!-- Contenu du tableau de bord -->
+            <div class="dashboard" style="width: 46%; float: left;">
+                <h3>Graphique des gains et pertes</h3>
+                <div id="graphique-container"></div>
+                <canvas id="myChart"></canvas>
             </div>
-            <div class="informations" style="width: 30%; float: right;">
+            <div class="paris-historique" style="width: 22%; float: left;">
+                <h3>Historique des paris</h3>
+                <div id="paris-historique"></div>
+            </div>
+            <div class="informations" style="width: 22%; float: left;">
                 <h3>Mes informations</h3>
-                <div id="mes-informations">
-                    <p id="user-nom"></p>
-                    <p id="user-prenom"></p>
-                    <p id="user-email"></p>
-                    <!-- Le bouton se connecter sera ajouté ici si l'utilisateur n'est pas connecté -->
-                </div>
+                <div id="mes-informations"></div>
             </div>
         </div>
     </div>
+    
 
     <footer>
         Tous droits réservés 2023
@@ -46,7 +47,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="init.js" type="module"></script>
     <script src="scripts.js" type="module"></script>
     <script src="moncompte.js" type="module"></script>
+
 </body>
 </html>

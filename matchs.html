@@ -12,7 +12,7 @@
         <h1>POUR ÊTRE AIDÉ APPELER LE 09 74 75 13 13</h1>
     </div>
     <div class="menu">
-        <img src="logo.png" alt="Logo">
+        <img src="assets/logo.png" alt="Logo">
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="login.html">Login</a></li>
@@ -21,18 +21,31 @@
         </ul>
     </div>
 
-    <div class="matchs-du-jour">
-        <h2>Voici les matchs du jour</h2>
+    <div class="matchs-container">
+        <h2>Tous les matchs</h2>
     </div>
     
+    <div id="matchModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="colonne1" class="colonne"></div>
+            <div id="colonne2" class="colonne">
+            </div>
+            <div id="colonne3" class="colonne"></div>
+        </div>
+    </div>
+    
+    
+
 
     <footer>
         Tous droits réservés 2023
     </footer>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-<script src="scripts.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="init.js" type="module"></script>
+    <script src="scripts.js" type="module"></script>
 
 
 </body>
